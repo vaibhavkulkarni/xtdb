@@ -18,10 +18,7 @@ content:
   sources:
     - url: ../ # https://github.com/xtdb/xtdb
       start_path: docs/main # index - Only necessary to read self-hosted docs.
-      branches: v2xtdbcom   # There is no way to hide a source from the nav
-                            # bar due to Antora limitations, so we will comment
-                            # this source out for docs.xtdb.com:
-                            # https://gitlab.com/antora/antora/-/issues/332
+      branches: v2xtdbcom
 
     - url: ../
       start_path: docs/language-reference
