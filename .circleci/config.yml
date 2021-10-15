@@ -200,7 +200,7 @@ jobs:
 
   deploy-api-docs:
     docker:
-      - image: circleci/clojure:openjdk-8-lein
+      - image: circleci/clojure:openjdk-17-lein
     working_directory: ~/xtdb
     steps:
       - checkout
@@ -221,7 +221,7 @@ jobs:
           arguments: |
             --acl public-read
           from: xtdb-javadoc
-          to: 's3://xtdb-api-docs/xtdb-javadoc/${DOCS_PREFIX}'
+          to: 's3://xtdb-javadocs-2/clients/java/${DOCS_PREFIX}'
       - node/install
       - run:
           command: |
